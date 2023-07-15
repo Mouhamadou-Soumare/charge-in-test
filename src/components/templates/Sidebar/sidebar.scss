@@ -1,0 +1,24 @@
+.Sidebar{
+
+    .MuiPaper-root{
+        padding: 36px 24px;
+        background-color: #0C354F;
+    }
+
+    .MuiAvatar-root{
+        max-width: 174px;
+        width: unset;
+        margin-left: inherit;
+        margin-bottom: 30px;
+
+    }
+
+    .group-item-sidebar{
+
+    }
+
+    .MuiCollapse-root{
+        background-color: #0B3047;
+        border-radius: 8px;
+    }
+}
