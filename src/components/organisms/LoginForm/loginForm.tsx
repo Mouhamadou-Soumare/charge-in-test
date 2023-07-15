@@ -27,7 +27,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   };
 
   const handleLogin = () => {
-    // Vérification des informations de connexion et appel de la fonction de connexion
     if (username && password) {
       onLogin(username, password);
     }
