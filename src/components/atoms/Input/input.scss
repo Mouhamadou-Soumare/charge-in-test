@@ -1,0 +1,12 @@
+    .input-login{
+        min-width: -webkit-fill-available !important;
+        min-height: 23px !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;  
+        border-radius: 2px !important; 
+        padding: 0 10px  !important;
+        ::before{
+            border-bottom: none !important;
+        }
+    }
+
+

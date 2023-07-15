@@ -1,0 +1,27 @@
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: left;
+      align-items: center;
+  
+      svg {
+        font-size: 36px;
+      }
+    }
+  
+    .subtitle {
+      display: flex; 
+      justify-content: left; 
+      align-items: center;
+      color: #6A6A6A;
+      text-align: left;
+      max-width: 90%;
+    }
+  }
+  
