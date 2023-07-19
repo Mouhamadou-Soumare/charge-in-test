@@ -1,0 +1,46 @@
+.Sidebar{
+
+    .MuiPaper-root{
+        padding: 36px 24px;
+        position: unset;
+        background-color: #0C354F;
+    }
+
+    .MuiAvatar-root{
+        max-width: 174px;
+        width: unset;
+        margin-left: inherit;
+        margin-bottom: 30px;
+
+    }
+
+    .MuiCollapse-root{
+        background-color: #0B3047;
+        border-radius: 8px;
+    }
+}
+
+.header-nav{
+
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 40px;
+    .header-items{
+        display: flex;
+        justify-content: space-between;
+        align-self: end;
+
+        .items-right{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap:24px;
+
+            span{
+                color:#369C96;
+                font-weight: bold;
+            }
+        }
+    }
+
+}

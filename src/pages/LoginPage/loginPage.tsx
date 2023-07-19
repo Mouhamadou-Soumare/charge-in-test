@@ -1,7 +1,4 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import CssBaseline from '@mui/material/CssBaseline';
-import Button from '@mui/material/Button';
 import LoginTemplate from '../../components/templates/login/loginTemplate';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -12,7 +9,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Avatar from '@mui/material/Avatar';
 import Logo from "../../assets/img/logo/logo_charge_in.png";
 import "./loginPage.scss";
-import theme from '../../theme';
+import theme from '../../style/theme';
 
 const Login: React.FC = ({}) => {
 

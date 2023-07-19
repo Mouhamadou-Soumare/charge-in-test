@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,21 +21,14 @@ import SectionTitleSidebar from "../../atoms/SectionTitleSidebar/sectionTitleSid
 
 const Sidebar: React.FC = () => {
     const drawerWidth = 300;
-
+    const container = typeof window !== 'undefined' ? () => window.document.body : undefined;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const handleDrawerToggle = () => {
+      setMobileOpen(!mobileOpen);
+    };
+    
     return (
-        <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-        className="Sidebar"
-      >
+       <>
          <Avatar
             alt="Logo"
             src={Logo}
@@ -74,11 +67,9 @@ const Sidebar: React.FC = () => {
                 <ItemSidebar itemText={"Objectifs"} iconName="Apartment" />
             </List>
         </div>
-       
-      </Drawer>
+      </>
     
-    )
-}
-
+    );
+};
 
 export default Sidebar;

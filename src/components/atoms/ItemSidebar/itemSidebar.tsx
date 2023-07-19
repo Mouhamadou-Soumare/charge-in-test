@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import TextField from '@mui/material/TextField';
-import FormControl from '@mui/material/FormControl';
 import './itemSidebar.scss';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

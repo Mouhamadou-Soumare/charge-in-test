@@ -1,37 +1,31 @@
 import React, { CSSProperties } from 'react';
 import Button, { ButtonProps as MuiButtonProps } from '@mui/material/Button';
-import theme from "../../../theme";
+import theme from "../../../style/theme";
+import "./button.scss";
 
 type TextTransform = 'capitalize' | 'uppercase' | 'lowercase' | 'none';
+type ButtonType = 'form' | 'dashboard' | 'action';
 
-interface ButtonProps extends MuiButtonProps {
+interface ButtonAtomProps  {
   text: string;
   backgroundColor?: string;
-  fontSize?: number;
-  width?: number | string;
-  height?: number | string;
-  textTransform?: TextTransform;
+  type: ButtonType;
 }
 
-const ButtonAtom: React.FC<ButtonProps> = ({
+const ButtonAtom: React.FC<ButtonAtomProps> = ({
   text,
   backgroundColor = theme.palette.primary.main,
-  fontSize = 18,
-  width = '-webkit-fill-available',
-  height = '61px',
-  textTransform = 'none',
+  type,
   ...rest
 }) => {
   const buttonStyle: CSSProperties = {
     backgroundColor,
-    fontSize: `${fontSize}px`,
-    width,
-    height,
-    textTransform
-  };
+   };
+
+  const buttonClassName = `button-${type}`;
 
   return (
-    <Button variant="contained" style={buttonStyle} {...rest}>
+    <Button variant="contained" style={buttonStyle} className={buttonClassName} {...rest}>
       {text}
     </Button>
   );

@@ -17,4 +17,7 @@ export default defineConfig({
     setupFiles: "src/setupTests",
     mockReset: true,
   },
+  define: {
+    global: {},
+  },
 })

@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import CheckboxAtom from '../../atoms/CheckBox/checkbox';
 import ButtonAtom from '../../atoms/Button/button';
 import './loginForm.scss';
-import theme from '../../../theme';
+import theme from '../../../style/theme';
 
 interface LoginFormProps {
   onLogin: (username: string, password: string) => void;
@@ -64,7 +64,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
           
             </div>
             <div className="login-controller">
-            <ButtonAtom text={'Se connecter'} textTransform='uppercase' />
+            <ButtonAtom text={'Se connecter'} type='form' />
              </div>
            
           </Box>

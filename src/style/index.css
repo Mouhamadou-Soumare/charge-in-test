@@ -18,3 +18,15 @@ code {
   flex-direction: column;
   gap: 3rem;
 }
+
+.main-content{
+  padding: 40px;
+}
+
+.first-title-dashboard{
+  margin-bottom: 40px;
+}
+
+.section-dashboard{
+  margin-top: 36px;
+}
