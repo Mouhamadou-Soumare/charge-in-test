@@ -1,54 +1,36 @@
-import React from 'react';
-import LabelAtom from '../../atoms/Label/label';
-import InputAtom from '../../atoms/Input/input';
-import FormControl from '@mui/material/FormControl';
+import React from "react";
+import LabelAtom from "../../atoms/Label/label";
+import InputAtom from "../../atoms/Input/input";
+import FormControl from "@mui/material/FormControl";
+import "./labelInput.scss";
 
 interface LabelInputProps {
   inputValue: string;
   labelValue: string;
   placeholder?: string;
-  onChange: (inputValue: string) => void;
-  renderType: 'input-form' | 'input-back-office';
+  renderType: "input-form" | "input-back-office";
+  onChange: (value: string) => void;
 }
 
 const LabelInputMolecule: React.FC<LabelInputProps> = ({
   inputValue,
   labelValue,
-  onChange,
   renderType,
-  placeholder
+  placeholder,
+  onChange,
 }) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.value);
-  };
-
   return (
-    <>
-    {renderType === 'input-form' && (
-    <div className='form-control-login'>
-       <FormControl variant="standard">
-
+    <div className="form-control-login">
+      <FormControl variant="standard" className="control">
         <LabelAtom labelValue={labelValue} />
         <InputAtom
-                          inputValue={inputValue}
-                          renderType={renderType}
-                          placeholder={placeholder} onChange={function (inputValue: string): void {
-                              throw new Error('Function not implemented.');
-                          } }      />
-    </FormControl>
-    </div>  
-    )}
-    {renderType === 'input-back-office' && (
-    <div className='form-control-login'>
-        <FormControl variant="standard">
-        <InputAtom
-                          placeholder={placeholder} inputValue={''} onChange={function (inputValue: string): void {
-                              throw new Error('Function not implemented.');
-                          } } renderType={'input-form'}        />  
-        </FormControl>
-    </div>  
-    )}
-  </>
+          inputValue={inputValue}
+          renderType={renderType}
+          placeholder={placeholder}
+          onChange={onChange}
+        />
+      </FormControl>
+    </div>
   );
 };
 

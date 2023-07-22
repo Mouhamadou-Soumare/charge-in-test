@@ -11,6 +11,7 @@ code {
     monospace;
 }
 
+a{text-decoration: none;}
 
 .container-test{
   margin: 20rem auto;

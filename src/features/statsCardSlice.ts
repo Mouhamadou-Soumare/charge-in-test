@@ -1,8 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CardDashboardState {
-  title: string;
-  iconName: string;
+interface StatsCardState {
   keyStat: number | string;
   keyStatEvolution: number;
   otherStat?: string;
@@ -11,20 +9,16 @@ interface CardDashboardState {
   b2bStat?: number | string;
 }
 
-const initialState: CardDashboardState = {
-  title: '',
-  iconName: '',
+const initialState: StatsCardState = {
   keyStat: 0,
   keyStatEvolution: 0,
 };
 
-const cardDashboardSlice = createSlice({
-  name: 'cardDashboard',
+const statsCardSlice = createSlice({
+  name: "statsCard",
   initialState,
   reducers: {
-    setCardDashboard: (state, action: PayloadAction<CardDashboardState>) => {
-      state.title = action.payload.title;
-      state.iconName = action.payload.iconName;
+    setStatsCard: (state, action: PayloadAction<StatsCardState>) => {
       state.keyStat = action.payload.keyStat;
       state.keyStatEvolution = action.payload.keyStatEvolution;
       state.otherStat = action.payload.otherStat;
@@ -35,5 +29,5 @@ const cardDashboardSlice = createSlice({
   },
 });
 
-export const { setCardDashboard } = cardDashboardSlice.actions;
-export default cardDashboardSlice.reducer;
+export const { setStatsCard } = statsCardSlice.actions;
+export default statsCardSlice.reducer;

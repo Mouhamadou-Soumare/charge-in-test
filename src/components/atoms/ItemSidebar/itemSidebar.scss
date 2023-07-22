@@ -1,4 +1,9 @@
 .item-nav{
+    display: flex;
+    flex-direction: row     ;
+    width: inherit;
+    text-decoration: none;
+    align-items: center;
     svg{
         width: 20px;
         color: #FFFFFF;
@@ -13,4 +18,30 @@
         min-width: 0;
         margin-right: 12px;
     }
+    
+    .active {
+        background-color: #082537;
+        border-radius: 8px 8px 0 0;
+      }
 }
+
+
+  
+
+  .item-nav.active,
+.sub-item.active .link {
+  color: #00ff00; 
+}
+
+.sub-item{
+
+    .link{
+        width: 100%;
+    }
+
+   .MuiTypography-root{
+    color: #6A93AC;
+   }
+
+}
+

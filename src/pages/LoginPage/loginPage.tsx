@@ -11,39 +11,27 @@ import Logo from "../../assets/img/logo/logo_charge_in.png";
 import "./loginPage.scss";
 import theme from '../../style/theme';
 
-const Login: React.FC = ({}) => {
 
+const Login: React.FC = () => {
+  
   return (
     <div>
- <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className='nav-form'>
-
-        
-        <Toolbar>
-        
-        <IconButton
-            size="small"
-            aria-label="menu"
-          >
-            <ArrowBackIosIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color={theme.palette.primary.main}>
-          Retour vers la page d’accueil
-          </Typography>
-          <Avatar
-            alt="Logo"
-            src={Logo}
-            sx={{ ml: 'auto' }}
-            className='logo-nav'
-          />
-        </Toolbar>
-      </AppBar>
-    </Box>
-      
-        <div><LoginTemplate onLogin={function (username: string, password: string): void {
-              throw new Error('Function not implemented.');
-          } }/></div>
-
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" className="nav-form">
+          <Toolbar>
+            <IconButton size="small" aria-label="menu">
+              <ArrowBackIosIcon />
+            </IconButton>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color={theme.palette.primary.main}>
+              Retour vers la page d’accueil
+            </Typography>
+            <Avatar alt="Logo" src={Logo} sx={{ ml: 'auto' }} className="logo-nav" />
+          </Toolbar>
+        </AppBar>
+      </Box>
+      <div>
+        <LoginTemplate  />
+      </div>
     </div>
   );
 };

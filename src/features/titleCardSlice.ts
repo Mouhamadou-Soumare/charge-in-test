@@ -1,21 +1,22 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import * as MUIcon from "@mui/icons-material";
 
 interface TitleCardState {
-  iconName: string | null;
+  iconName: keyof typeof MUIcon;
   titleCard: string;
 }
 
 const initialState: TitleCardState = {
-  iconName: null,
-  titleCard: '',
+  iconName: "Abc",
+  titleCard: "titre de la carte",
 };
 
 const titleCardSlice = createSlice({
-  name: 'titleCard',
+  name: "titleCard",
   initialState,
   reducers: {
     setTitleCard: (state, action: PayloadAction<TitleCardState>) => {
-      state.iconName = action.payload.iconName;
+      state.iconName = "Abc";
       state.titleCard = action.payload.titleCard;
     },
   },

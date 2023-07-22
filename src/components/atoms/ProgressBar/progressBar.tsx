@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import CircularProgress, {
   CircularProgressProps,
-} from '@mui/material/CircularProgress';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import './progressBar.scss';
+} from "@mui/material/CircularProgress";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import "./progressBar.scss";
 
-const CircularProgressWithLabel = (props: CircularProgressProps & { value: number }) => {
+const CircularProgressWithLabel = (
+  props: CircularProgressProps & { value: number }
+) => {
   const { value, ...otherProps } = props;
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 70 ? 0 : prevProgress + 10));
+      setProgress((prevProgress) =>
+        prevProgress >= 70 ? 0 : prevProgress + 10
+      );
     }, 800);
     return () => {
       clearInterval(timer);
@@ -20,11 +24,14 @@ const CircularProgressWithLabel = (props: CircularProgressProps & { value: numbe
   }, []);
 
   return (
-    <Box sx={{ position: 'relative', display: 'inline-flex' }} className="progress-bar">
+    <Box
+      sx={{ position: "relative", display: "inline-flex" }}
+      className="progress-bar"
+    >
       <CircularProgress
         variant="determinate"
         value={100}
-        sx={{ color: 'grey' }}
+        sx={{ color: "grey" }}
         size={100}
         thickness={6}
         {...otherProps}
@@ -33,8 +40,8 @@ const CircularProgressWithLabel = (props: CircularProgressProps & { value: numbe
         variant="determinate"
         value={progress}
         sx={{
-          color: '#308fe8',
-          position: 'absolute',
+          color: "#308fe8",
+          position: "absolute",
           left: 0,
         }}
         size={100}
@@ -47,13 +54,18 @@ const CircularProgressWithLabel = (props: CircularProgressProps & { value: numbe
           left: 0,
           bottom: 0,
           right: 0,
-          position: 'absolute',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          position: "absolute",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <Typography variant="caption" component="div" color="text.secondary" className='number'>
+        <Typography
+          variant="caption"
+          component="div"
+          color="text.secondary"
+          className="number"
+        >
           {`${Math.round(progress)}%`}
         </Typography>
       </Box>
@@ -66,7 +78,9 @@ const CircularWithValueLabel = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
     }, 800);
     return () => {
       clearInterval(timer);

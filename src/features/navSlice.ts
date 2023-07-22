@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 interface NavState {
   mobileOpen: boolean;
@@ -9,7 +9,7 @@ const initialState: NavState = {
 };
 
 const navSlice = createSlice({
-  name: 'nav',
+  name: "nav",
   initialState,
   reducers: {
     setMobileOpen: (state, action) => {

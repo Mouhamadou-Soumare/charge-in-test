@@ -3,6 +3,7 @@
     .MuiPaper-root{
         padding: 36px 24px;
         background-color: #0C354F;
+        min-height: 100vh;
     }
 
     .MuiAvatar-root{
@@ -13,12 +14,9 @@
 
     }
 
-    .group-item-sidebar{
-
-    }
 
     .MuiCollapse-root{
         background-color: #0B3047;
-        border-radius: 8px;
+        border-radius: 0 !important;
     }
 }
