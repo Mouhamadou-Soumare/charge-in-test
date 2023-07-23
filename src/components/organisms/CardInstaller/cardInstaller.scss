@@ -1,0 +1,36 @@
+.card-station{
+    padding: 40px;
+    border-radius: 16px !important;
+
+    .container-element-selected{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1;
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px solid #DCE6E5;
+        background: var(--main-7, #FFF);
+        gap: 64px;
+        margin-bottom: 24px;
+
+    
+        .img-element{
+            max-width: 150px;
+        }
+
+        .value-element{
+         font-size: 48px;
+         color:#304399; 
+        font-weight: 600;  
+        }
+
+        div:not(:last-child){
+            padding-right: 40px;
+            border-right: 1px #DCE6E5 solid;
+        }
+      
+    }
+}
+

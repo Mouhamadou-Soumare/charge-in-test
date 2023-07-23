@@ -1,0 +1,30 @@
+.profil-pagination-container{
+
+    display: flex;
+    justify-content: space-between;
+    
+    .pagination-block{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .icon{
+        svg{
+            width: 18px;
+            color: #369C96;
+        }
+    }
+
+    .back-next{
+        text-align: right;
+        color: #8FA2A2;
+        font-size: 16px;
+    }
+
+    .destination{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

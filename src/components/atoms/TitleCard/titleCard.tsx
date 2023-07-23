@@ -5,7 +5,7 @@ import { Typography, useTheme } from "@mui/material";
 import "./titleCard.scss";
 
 interface TitleCardProps {
-  iconName: keyof typeof MUIcon;
+  iconName?: keyof typeof MUIcon;
   titleCard: string;
 }
 
@@ -14,10 +14,18 @@ const TitleCard: React.FC<TitleCardProps> = ({ iconName, titleCard }) => {
   const Icon = iconName ? MUIcon[iconName] : null;
 
   return (
-    <Box className="title-card">
-      {Icon && <Icon style={{ color: theme.palette.primary.main }} />}
-      <Typography variant="body1">{titleCard}</Typography>
-    </Box>
+    <React.Fragment>
+      {Icon ? (
+        <Box className="title-card">
+          <Icon style={{ color: theme.palette.primary.main }} />
+          <Typography variant="body1">{titleCard}</Typography>
+        </Box>
+      ) : (
+        <Box className="title-card-without-icon">
+          <Typography variant="h2">{titleCard}</Typography>
+        </Box>
+      )}
+    </React.Fragment>
   );
 };
 

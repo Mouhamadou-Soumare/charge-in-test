@@ -3,14 +3,19 @@
   import dashboardSlice from "../features/dashboardSlice"
   import tableSlice from "../features/table/tableSlice"
   import authSlice from "../features/authSlice"
-
+  import personalInfoCardSlice from "../features/personalInfoCardSlice"
+  import formAnswerSlice from "../features/formAnswerSlice"
+  import commentsCardSlice from "../features/CommentsCardSlice"
 
   export const store = configureStore({
     reducer: {
       nav: navSlice,
       dashboard: dashboardSlice,
       table:tableSlice,
-      auth:authSlice
+      auth:authSlice,
+      personalInfoCard: personalInfoCardSlice,
+      formAnswerCard:  formAnswerSlice,
+      commentsCard: commentsCardSlice
       
     },
   })

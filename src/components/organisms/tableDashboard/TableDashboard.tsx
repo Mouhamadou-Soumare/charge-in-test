@@ -66,17 +66,14 @@ const TableDash: React.FC = () => {
 
   
   const handleEditClick = (row: TableData) => {
-    // Implement your logic for handling the edit action here.
     console.log("Edit clicked for row:", row);
   };
 
   const handleDeleteClick = (row: TableData) => {
-    // Implement your logic for handling the delete action here.
     console.log("Delete clicked for row:", row);
   };
 
   const handleViewMoreClick = (row: TableData) => {
-    // Implement your logic for handling the "view more" action here.
     console.log("View More clicked for row:", row);
   };
   return (
