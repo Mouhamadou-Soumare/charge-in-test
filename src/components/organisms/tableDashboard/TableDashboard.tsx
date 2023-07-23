@@ -128,7 +128,7 @@ const TableDash: React.FC = () => {
                       {row.name}
                     </TableCell>
                     <TableCell align="left" padding="none">
-                      Borne Modèle {row.station}
+                      Borne Modèlle {row.station}
                     </TableCell>
                     <TableCell align="left" padding="none">
                       {row.estimate}
