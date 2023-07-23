@@ -1,5 +1,5 @@
-import React from "react";
-import Box from "@mui/material/Box";
+import React from 'react';
+import Box from '@mui/material/Box';
 import "./statsCard.scss";
 
 interface StatsCardProps {
@@ -20,57 +20,45 @@ const StatsCard: React.FC<StatsCardProps> = ({
   b2bStat,
 }) => {
   const isEuroStat =
-    (typeof keyStat === "string" && keyStat.includes("€")) ||
-    (typeof b2cStat === "string" && b2cStat.includes("€")) ||
-    (typeof b2bStat === "string" && b2bStat.includes("€"));
+    (typeof keyStat === 'string' && keyStat.includes('€')) ||
+    (typeof b2cStat === 'string' && b2cStat.includes('€')) ||
+    (typeof b2bStat === 'string' && b2bStat.includes('€'));
 
   return (
     <Box className="stats-container">
       {otherStat && (
-        <div className="flex-column stats-margin">
-          <div className="other-stat-name">{otherStat}</div>
-          <div className="other-stat-value">{otherStatValue}</div>
+        <div className='flex-column stats-margin'>
+          <div className='other-stat-name'>{otherStat}</div>
+          <div className='other-stat-value'>{otherStatValue}</div>
         </div>
       )}
 
-      <div className="flex-row stats-margin">
-        <div className="key-stat">
+      <div className='flex-row stats-margin'>
+        <div className='key-stat'>
           {isEuroStat ? (
-            <span className="stat-with-ht">
-              {keyStat} <span className="HT-stat">HT</span>
+            <span className='stat-with-ht'>
+              {keyStat} <span className='HT-stat'>HT</span>
             </span>
           ) : (
             keyStat
           )}
         </div>
-        <div>{keyStatEvolution}%</div>
+        <div>
+          {keyStatEvolution}%
+        </div>
       </div>
 
       {b2bStat && (
-        <div className="stats-margin">
+        <div className='stats-margin'>
           {isEuroStat ? (
-            <div className="business-stat-container-with-ht">
-              <div>
-                {" "}
-                <div className="b2-title">B2C</div>{" "}
-                <span className="stat-with-ht">
-                  {" "}
-                  {b2cStat} <span className="HT-stat">HT</span>{" "}
-                </span>
-              </div>
-              <div>
-                {" "}
-                <div className="b2-title">B2B</div>{" "}
-                <div>
-                  {" "}
-                  {b2bStat} <span className="HT-stat">HT</span>
-                </div>
-              </div>
+            <div className='business-stat-container-with-ht'>
+              <div> <div className='b2-title'>B2C</div> <span className='stat-with-ht'> {b2cStat} <span className='HT-stat'>HT</span> </span></div>
+              <div> <div className='b2-title'>B2B</div> <div > {b2bStat} <span className='HT-stat'>HT</span></div></div>
             </div>
           ) : (
-            <div className="business-stat-empty">
-              <div>B2C: {b2cStat || "##"}</div>
-              <div> B2B: {b2bStat || "##"}</div>
+            <div className='business-stat-empty'>
+              <div>B2C: {b2cStat || '##'}</div>
+              <div> B2B: {b2bStat || '##'}</div> 
             </div>
           )}
         </div>

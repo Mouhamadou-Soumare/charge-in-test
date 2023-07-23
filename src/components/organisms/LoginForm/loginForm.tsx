@@ -9,7 +9,7 @@ import "./loginForm.scss";
 import theme from "../../../style/theme";
 import LabelInputMolecule from "../../molecules/labelInput/labelInput";
 import { loginFailure, loginSuccess } from "../../../features/authSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 
 interface LoginFormProps {
   onLogin: (username: string, password: string) => void;
@@ -18,7 +18,7 @@ interface LoginFormProps {
 const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleUsernameChange = (value: string) => {
     setUsername(value);

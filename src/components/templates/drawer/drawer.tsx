@@ -11,7 +11,7 @@ import "./drawer.scss";
 import Sidebar from "../../molecules/Sidebar/Sidebar";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import { deepOrange, deepPurple } from "@mui/material/colors";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { setMobileOpen } from "../../../features/navSlice";
 import { RootState } from "../../../app/store";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -23,8 +23,8 @@ import B2cProfil from "../../../pages/B2cProfil/B2cProfil";
 const drawerWidth = 300;
 
 export default function ResponsiveDrawer() {
-  const mobileOpen = useSelector((state: RootState) => state.nav.mobileOpen);
-  const dispatch = useDispatch();
+  const mobileOpen = useAppSelector((state: RootState) => state.nav.mobileOpen);
+  const dispatch = useAppDispatch();
   const handleDrawerToggle = () => {
     dispatch(setMobileOpen(!mobileOpen));
   };
