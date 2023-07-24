@@ -7,8 +7,9 @@
 <li>Les pages présentes sont :
 Login: /
 Accueil: Accueil
-Maisons:
-Profil:</li>
+Maisons: /accueil/maisons
+Profil: /accueil/profil 
+</li>
 </ul><ul>
 <li>Test technique réalisé avec la stack React, TypeScript, React Redux Toolkit et Material-UI en utilisant une approche Atomic Design.</li>
 </ul><h2>Technologies Used</h2>

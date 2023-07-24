@@ -38,10 +38,10 @@ const Sidebar: React.FC = () => {
           <ItemSidebar
             itemText="Maisons"
             iconName="House"
-            link="/accueil/b2c-list"
-            isActive={activeLink === "/accueil/b2c-list"}
+            link="/accueil/maisons"
+            isActive={activeLink === "/accueil/maisons"}
             subItems={[
-              { subItemText: "En cours", link: "/accueil/b2c-list" },
+              { subItemText: "En cours", link: "/accueil/maisons" },
               { subItemText: "Archivés" }
             ]}
           />

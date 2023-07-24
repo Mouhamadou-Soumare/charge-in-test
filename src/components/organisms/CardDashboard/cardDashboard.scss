@@ -1,9 +1,15 @@
 .card-dashboard {
-  width: 247px;
+  width: 23%;
   height: 300px;
   border-radius: 16px !important;
   padding: 26px 30px;
   box-shadow: 0px 4px 16px 0px rgba(176, 189, 189, 0.16);
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 800px) { 
+  .card-dashboard{
+    width: 100%;
+  }
 }

@@ -6,7 +6,7 @@
 }
 
 .button-dashboard{
-    width: 340px;
+    width: 30%;
     height: 45px;
     font-size: 16px !important;
     text-transform: none !important;
@@ -19,3 +19,9 @@
     border-radius: 8px !important;
     text-transform: none !important;
 }
+
+@media (max-width: 700px) { 
+    .button-dashboard{
+        width: 100%;
+    }
+ }
