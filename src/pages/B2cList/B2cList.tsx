@@ -4,7 +4,6 @@ import TitleAtom from '../../components/atoms/Title/title';
 import TableDash from '../../components/organisms/TableDashboard/TableDashboard';
 import ButtonAtom from '../../components/atoms/Button/button';
 import "./b2clist.scss";
-import InputAtom from '../../components/atoms/Input/input';
 
 const B2cList : React.FC = () => {
     

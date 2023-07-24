@@ -4,7 +4,6 @@ import { RootState } from '../../../app/store';
 import { Card } from '@mui/material';
 import TitleCard from '../../atoms/TitleCard/titleCard';
 import ButtonAtom from '../../atoms/Button/button';
-import wallboxImg from "../../../assets/img/wallbox.jpg";
 import blaxImg from "../../../assets/img/Blax.jpg"
 import { setInstallerData } from '../../../features/cardInstallerSlice';
 import CardElement from '../../molecules/CardElement/CardElement';

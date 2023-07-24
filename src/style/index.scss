@@ -43,6 +43,13 @@ a {
   flex-wrap: wrap;
 }
 
+.form-answer{
+  color:  #8FA2A2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140.625%;    
+}
 
 @mixin typography($color, $font-size, $font-weight) {
   color: $color;

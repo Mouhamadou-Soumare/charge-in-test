@@ -10,6 +10,7 @@ import theme from "../../../style/theme";
 import LabelInputMolecule from "../../molecules/labelInput/labelInput";
 import { loginFailure, loginSuccess } from "../../../features/authSlice";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
 
 interface LoginFormProps {
   onLogin: (username: string, password: string) => void;
@@ -18,6 +19,7 @@ interface LoginFormProps {
 const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loginStatus, setLoginStatus] = useState(""); 
   const dispatch = useAppDispatch();
 
   const handleUsernameChange = (value: string) => {
@@ -29,12 +31,17 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   };
 
   const handleLogin = () => {
-    if (username === "demoUser" && password === "demoPassword") {
+    if (username === "demoUser@chargein.com" && password === "demoPassword") {
       dispatch(loginSuccess());
-      window.location.href = "/dashboard";
+      window.location.href = "/accueil";
     } else {
       dispatch(loginFailure("Invalid credentials. Please try again."));
+      setLoginStatus("failure"); 
     }
+  };
+
+  const handleCloseModal = () => {
+    setLoginStatus(""); 
   };
 
   return (
@@ -95,6 +102,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
           </div>
         </Box>
       </Box>
+      <Dialog open={loginStatus === "failure"} onClose={handleCloseModal}>
+        <DialogTitle>Informations</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Pour accéder à la démonstration, veuillez utiliser les informations suivantes : demoUser@chargein.com/demoPassword.
+          </DialogContentText>
+        </DialogContent>
+      </Dialog>
     </Container>
   );
 };

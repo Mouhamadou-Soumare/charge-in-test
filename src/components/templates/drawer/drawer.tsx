@@ -117,9 +117,9 @@ export default function ResponsiveDrawer() {
       >
         <Toolbar />
         <Switch>
-          <Route path="/dashboard/b2c-list" component={B2cList} />
-          <Route path="/dashboard/b2c-profil" component={B2cProfil} />
-          <Route path="/dashboard" component={DashboardHomepage} />
+          <Route path="/accueil/maisons" component={B2cList} />
+          <Route path="/accueil/profil" component={B2cProfil} />
+          <Route path="/accueil" component={DashboardHomepage} />
           <Route component={notFound} />
         </Switch>
       </Box>

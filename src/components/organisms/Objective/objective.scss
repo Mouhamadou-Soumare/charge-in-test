@@ -37,9 +37,14 @@
     .group-progress-bar {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 80px;
     }
   }
   
+
+  @media (max-width: 900px) { 
+    .group-progress-bar {
+      flex-wrap: wrap;
+    }
+ }

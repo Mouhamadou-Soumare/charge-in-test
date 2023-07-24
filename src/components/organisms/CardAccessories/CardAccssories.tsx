@@ -1,6 +1,4 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { RootState } from '../../../app/store';
 import { Card } from '@mui/material';
 import TitleCard from '../../atoms/TitleCard/titleCard';
 import ButtonAtom from '../../atoms/Button/button';

@@ -3,6 +3,8 @@ import Box from "@mui/material/Box";
 import "./infosCard.scss";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import theme from "../../../style/theme";
+import { colors } from "@mui/material";
 
 interface InfoCardProps {
   firstName: string;
@@ -25,47 +27,38 @@ const InfosCard: React.FC<InfoCardProps> = ({
     <Box className="infos-card-container">
       <div className="infos-elements">
         <p>Prénom</p>
-        <p>{firstName}</p>
+        <p className="form-answer">{firstName}</p>
       </div>
 
       <div className="infos-elements">
         <p>Nom</p>
-        <p>{lastName}</p>
+        <p className="form-answer">{lastName}</p>
       </div>
 
       <div className="infos-elements">
         <p>Code Postal</p>
-        <p>{codePostal}</p>
+        <p className="form-answer">{codePostal}</p>
       </div>
 
       <div className="infos-elements">
         <p>Adresse</p>
-        <p>{adress}</p>
+        <p className="form-answer">{adress}</p>
       </div>
 
       <div className="infos-elements">
         <div>
-          <div>
-            <EmailIcon />{" "}
-          </div>
-          <div>
-            <p>E-mail</p>
-          </div>
+          <EmailIcon style={{ color: theme.palette.primary.main }} />
+          Email
         </div>
-        <div></div>
-        <div>
-          <div></div>
-          <div>
-            <p>{mail}</p>
-          </div>
-        </div>
+        <div className="form-answer-with-icon form-answer">{mail}</div>
       </div>
 
       <div className="infos-elements">
-        <p>
-          <PhoneIcon /> Téléphone
-        </p>
-        <p>{phone}</p>
+        <div>
+          <PhoneIcon style={{ color: theme.palette.primary.main }} />
+          Email
+        </div>
+        <div className="form-answer-with-icon form-answer">{phone}</div>
       </div>
     </Box>
   );

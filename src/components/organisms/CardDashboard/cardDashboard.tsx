@@ -2,7 +2,6 @@ import React from 'react';
 import TitleCard from '../../atoms/TitleCard/titleCard';
 import StatsCard from '../../atoms/StatsCard/statsCard';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import "./cardDashboard.scss";
 import * as MUIcon from '@mui/icons-material';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import CheckBox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { useAppDispatch } from "../../../app/hooks";
 
 interface CheckboxAtomProps {
   label: string;
@@ -11,8 +11,7 @@ interface CheckboxAtomProps {
 
 const CheckboxAtom: React.FC<CheckboxAtomProps> = ({
   label,
-  checked,
-  checkboxId,
+
 }) => {
   const dispatch = useAppDispatch();
 

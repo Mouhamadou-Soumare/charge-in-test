@@ -2,8 +2,6 @@
     import TitleCard from '../../atoms/TitleCard/titleCard';
     import InfosCard from '../../atoms/InfosCard/InfosCard';
     import Card from '@mui/material/Card';
-    import CardContent from '@mui/material/CardContent';
-    import * as MUIcon from '@mui/icons-material';
     import "./personalInfos.scss";
 
     interface PersonalInfoCardInterface  {
