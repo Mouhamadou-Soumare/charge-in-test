@@ -1,5 +1,8 @@
-.b2c-card-row{
+.b2c-card-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: space-between;
-}
+  }
+  

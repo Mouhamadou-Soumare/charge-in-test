@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PersonalInfoCardData } from '../components/organisms/PersonalInfoCard/PersonalInfoCard';
+import { PersonalInfoCardData } from '../components/organisms/CardPersonalInfo/PersonalInfoCard';
 
 interface PersonalInfoCardState {
   data: PersonalInfoCardData;

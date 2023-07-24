@@ -22,7 +22,7 @@ const TitleCard: React.FC<TitleCardProps> = ({ iconName, titleCard }) => {
         </Box>
       ) : (
         <Box className="title-card-without-icon">
-          <Typography variant="h2">{titleCard}</Typography>
+          <Typography style={theme.typography.h2}>{titleCard}</Typography>
         </Box>
       )}
     </React.Fragment>

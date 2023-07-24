@@ -1,35 +1,45 @@
-.objective-container{
-
+.objective-container {
     display: flex;
-padding: 30px 38px;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-gap: 24px;
-align-self: stretch;
-border-radius: 16px;
-background: linear-gradient(137deg, #0C354F 0%, #326B8F 100%);
-
-/* Dropshadow Blue */
-box-shadow: 0px 4px 16px 0px rgba(164, 188, 211, 0.60);
-
-    .header-objective{
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
-        align-items: center;
+    padding: 30px 38px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: linear-gradient(137deg, #0c354f 0%, #326b8f 100%);
+  
+    box-shadow: 0px 4px 16px 0px rgba(164, 188, 211, 0.6);
+  
+    .header-objective {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
     }
+  
+    .group-toggle {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 24px;
 
-    .group-toggle{
-        display: flex;
-        flex-direction: row;
-        gap:24px;
+      button{
+        &:not(:first-child){
+          background-color: transparent !important;
+          color: #6A93AC !important;
+        }
+      }
+
     }
-
-    .group-progress-bar{
-        display: flex;
-        flex-direction: row;
-        gap: 80px;
+  
+    .group-progress-bar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
     }
-
-}
+  }
+  

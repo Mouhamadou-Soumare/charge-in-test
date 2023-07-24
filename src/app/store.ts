@@ -1,30 +1,33 @@
-  import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
-  import navSlice from "../features/navSlice"
-  import dashboardSlice from "../features/dashboardSlice"
-  import tableSlice from "../features/table/tableSlice"
-  import authSlice from "../features/authSlice"
-  import personalInfoCardSlice from "../features/personalInfoCardSlice"
-  import formAnswerSlice from "../features/formAnswerSlice"
-  import commentsCardSlice from "../features/CommentsCardSlice"
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import navSlice from "../features/navSlice";
+import dashboardSlice from "../features/dashboardSlice";
+import tableSlice from "../features/table/tableSlice";
+import authSlice from "../features/authSlice";
+import personalInfoCardSlice from "../features/personalInfoCardSlice";
+import formAnswerSlice from "../features/formAnswerSlice";
+import cardStationSlice from "../features/cardStationSlice";
+import commentsCardSlice from "../features/CommentsCardSlice";
+import cardInstallerSlice from "../features/cardInstallerSlice";
 
-  export const store = configureStore({
-    reducer: {
-      nav: navSlice,
-      dashboard: dashboardSlice,
-      table:tableSlice,
-      auth:authSlice,
-      personalInfoCard: personalInfoCardSlice,
-      formAnswerCard:  formAnswerSlice,
-      commentsCard: commentsCardSlice
-      
-    },
-  })
+export const store = configureStore({
+  reducer: {
+    nav: navSlice,
+    dashboard: dashboardSlice,
+    table: tableSlice,
+    auth: authSlice,
+    personalInfoCard: personalInfoCardSlice,
+    formAnswerCard: formAnswerSlice,
+    commentsCard: commentsCardSlice,
+    cardStation: cardStationSlice,
+    cardInstaller: cardInstallerSlice
+  },
+});
 
-  export type AppDispatch = typeof store.dispatch
-  export type RootState = ReturnType<typeof store.getState>
-  export type AppThunk<ReturnType = void> = ThunkAction<
-    ReturnType,
-    RootState,
-    unknown,
-    Action<string>
-  >
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>;

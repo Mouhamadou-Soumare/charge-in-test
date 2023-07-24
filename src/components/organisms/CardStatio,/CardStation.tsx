@@ -6,11 +6,11 @@ import TitleCard from '../../atoms/TitleCard/titleCard';
 import ButtonAtom from '../../atoms/Button/button';
 import CardElement from '../../molecules/CardElement/CardElement';
 import wallboxImg from "../../../assets/img/wallbox.jpg";
-import { setStationData } from '../../../features/cardStationSlice';
+import { setElementData } from '../../../features/cardStationSlice';
 
 const CardStation: React.FC = () => {
   const value = '2200.00€';
-  const stationData = useAppSelector((state: RootState) => state.cardStation);
+  const stationData = useAppSelector((state: RootState) => state.cardElements);
   const dispatch = useAppDispatch();
   const handleSetStationData = () => {
     const stationData = {
@@ -19,7 +19,7 @@ const CardStation: React.FC = () => {
       chargeTime: '6h30',
       optimization: true,
     };
-    dispatch(setStationData(stationData));
+    dispatch(setElementData(stationData));
   };
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ const CardStation: React.FC = () => {
 
 
   return (
-    <Card className='card-template'>
+    <Card className='card-station card-template'>
       <TitleCard titleCard={'Borne choisie'} />
 
       <CardElement
@@ -39,7 +39,7 @@ const CardStation: React.FC = () => {
         <li>Puissance max pour votre installation : {stationData.power} kW</li>
         <li>Contrôle d’accès : {stationData.accessControl}</li>
         <li>Temps de charge : {stationData.chargeTime}</li>
-        <li>Optimisation coût de recharge : {stationData.optimization ? 'oui' : 'non'}</li>
+        <li>Optimisation coût de recharge : {stationData.optimization}</li>
         <li>Borne connectée</li>
       </CardElement>
 

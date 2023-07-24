@@ -1,15 +1,7 @@
-.objective-label{
-    display: flex;
-    flex-direction: column;
+.objective-label{ 
     padding: 10px;
-
-    .number{
-        color: #6A93AC;
-        font-size: 18px;
-    }
-
     .state{
-        color: #FFFFFF;
+        color: var(--white,#fff);
         font-weight: 500;
         font-size: 20px;
     }

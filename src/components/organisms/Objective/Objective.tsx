@@ -23,7 +23,7 @@ const Objective: React.FC = () => {
         </div>
       </div>
       <div className="group-progress-bar">
-        <LabelProgressBar />
+        <LabelProgressBar  />
         <LabelProgressBar />
         <LabelProgressBar />
       </div>

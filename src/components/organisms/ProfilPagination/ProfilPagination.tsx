@@ -23,13 +23,15 @@ const ProfilPagination: React.FC<ProfilPaginationProps> = ({ placement }) => {
         </div>
       </div>
       <div className='pagination-block'>
-        <div className='icon'>
-          <ArrowForwardIosIcon />
-        </div>
+       
         <div>
           <div className='back-next'>Suivant</div> <div className='destination'>Prénom Nom</div>
         </div>
+        <div className='icon'>
+          <ArrowForwardIosIcon />
+        </div>
       </div>
+      
     </Box>
   );
 };

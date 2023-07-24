@@ -6,7 +6,7 @@ interface LabelAtomProps {
 }
 
 const LabelAtom: React.FC<LabelAtomProps> = ({ labelValue }) => {
-  return <label className="label-login">{labelValue}</label>;
+  return <label  className="label-login">{labelValue}</label>;
 };
 
 export default LabelAtom;

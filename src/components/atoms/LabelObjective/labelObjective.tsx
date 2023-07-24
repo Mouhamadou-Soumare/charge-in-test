@@ -5,7 +5,7 @@ import "./labelObjective.scss";
 
 const LabelObjective: React.FC = () => {
   return (
-    <Box className="objective-label">
+    <Box className="objective-label flex-column">
       <Typography
         className="number"
         variant="caption"
@@ -14,7 +14,7 @@ const LabelObjective: React.FC = () => {
       >
         50 partenaires
       </Typography>
-      <Typography className="state" variant="subtitle2" gutterBottom>
+      <Typography className="state" gutterBottom>
         En cours
       </Typography>
     </Box>

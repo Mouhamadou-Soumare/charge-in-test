@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import CircularProgress, {
   CircularProgressProps,
 } from "@mui/material/CircularProgress";
@@ -7,21 +7,25 @@ import Box from "@mui/material/Box";
 import "./progressBar.scss";
 
 const CircularProgressWithLabel = (
-  props: CircularProgressProps & { value: number }
+  props: CircularProgressProps & 
+  { 
+    value: number;
+    maxValue: number;
+  }
 ) => {
-  const { value, ...otherProps } = props;
+  const { value,maxValue, ...otherProps } = props;
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress >= 70 ? 0 : prevProgress + 10
+        prevProgress >= maxValue ? 0 : prevProgress + 10
       );
     }, 800);
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [maxValue]);
 
   return (
     <Box
@@ -73,21 +77,9 @@ const CircularProgressWithLabel = (
   );
 };
 
-const CircularWithValueLabel = () => {
-  const [progress, setProgress] = useState(10);
+const CircularWithValueLabel: React.FC<{ maxValue: number }> = ({ maxValue }) => {
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 10
-      );
-    }, 800);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
-  return <CircularProgressWithLabel value={progress} />;
+  return <CircularProgressWithLabel maxValue={maxValue} value={80} />;
 };
 
 export default CircularWithValueLabel;

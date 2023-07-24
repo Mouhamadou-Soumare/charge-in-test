@@ -28,8 +28,8 @@ const CommentCard: React.FC = () => {
   };
 
   return (
-    <Card className='card-comments-container'>
-    <Card className='sub-container'>
+    <Card className='card-comments-container '>
+    <Card className='sub-container card-template'>
       <div className='header'>
         <div>
         <TitleCard titleCard={'Commentaires'} />
@@ -43,6 +43,7 @@ const CommentCard: React.FC = () => {
             id="filled-multiline-static"
             multiline
             rows={4}
+            name='comment-input'
             defaultValue="Ajouter un commentaire..."
             variant="filled"
             className='textfield'
@@ -57,7 +58,7 @@ const CommentCard: React.FC = () => {
       </div>
       </Card>
 
-      <Card className='sub-container'> 
+      <Card className='sub-container card-template'> 
       {comments.length > 0 ? (
         <div className='comments-history'>
             <div className='profile'>

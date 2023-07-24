@@ -1,23 +1,21 @@
-.card-accssories{
-    padding: 40px;
-    border-radius: 16px !important;
-
-    .container-accessories{
+.card-accssories {
+    .container-accessories {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: -2 50px;
+      margin-bottom: 24px;
+  
+      .li-row {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        gap: -2 50px;
-        margin-bottom: 24px;
-
-        .li-row{
-            display: flex;
-            flex-direction: row;
-            gap:16px
-        }
-
-        .price{
-            color:#369C96;
-            font-weight: 400;
-        }
+        gap: 16px;
+      }
+  
+      .price {
+        color: #369c96;
+        font-weight: 400;
+      }
     }
-}
+  }
+  

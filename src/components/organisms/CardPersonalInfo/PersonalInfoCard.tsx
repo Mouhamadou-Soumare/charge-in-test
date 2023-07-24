@@ -24,7 +24,7 @@
     const { title, firstName, lastName, codePostal, adress, mail, phone } = infosData;
 
     return (
-        <Card className='card-personal-info'>
+        <Card className='card-personal-info card-template'>
             <TitleCard  titleCard={title}  />
             <InfosCard firstName={firstName} lastName={lastName} codePostal={codePostal} adress={adress} mail={mail} phone={phone}/>
         </Card>

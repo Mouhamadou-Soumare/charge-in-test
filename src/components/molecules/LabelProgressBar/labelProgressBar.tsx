@@ -6,9 +6,9 @@ import "./labelProgressBar.scss";
 
 const LabelProgressBar: React.FC = () => {
   return (
-    <Box className="label-progress-bar">
+    <Box className="label-progress-bar flex-row">
       <LabelObjective />
-      <CircularWithValueLabel />
+      <CircularWithValueLabel maxValue={70} />
     </Box>
   );
 };

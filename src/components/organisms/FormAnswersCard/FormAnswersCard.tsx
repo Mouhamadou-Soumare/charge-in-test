@@ -14,7 +14,7 @@ const FormAnswersCard: React.FC<FormAnswersCardProps> = ({ title }) => {
   const formAnswersData = useSelector((state: RootState) => state.formAnswerCard);
 
   return (
-    <Card className="form-answers-card">
+    <Card className="form-answers-card card-template">
       <TitleCard titleCard={title} />
       <FormAnswer
         accomodation={formAnswersData.accomodation}

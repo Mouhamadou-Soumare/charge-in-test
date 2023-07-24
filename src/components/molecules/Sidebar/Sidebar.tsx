@@ -79,19 +79,19 @@ const Sidebar: React.FC = () => {
       <div className="group-item-sidebar">
         <SectionTitleSidebar text="Utilisateurs" />
         <List>
-          <ItemSidebar itemText={"CEO & Admins"} iconName="House" />
-          <ItemSidebar itemText={"Project Managers"} iconName="Home" />
-          <ItemSidebar itemText={"Installateurs"} iconName="Apartment" />
-          <ItemSidebar itemText={"Clients B2C"} iconName="Apartment" />
+          <ItemSidebar itemText={"CEO & Admins"} iconName="Security" />
+          <ItemSidebar itemText={"Project Managers"} iconName="Person" />
+          <ItemSidebar itemText={"Installateurs"} iconName="Person" />
+          <ItemSidebar itemText={"Clients B2C"} iconName="Person" />
         </List>
       </div>
       <div className="group-item-sidebar">
         <SectionTitleSidebar text="Données" />
         <List>
-          <ItemSidebar itemText={"Bornes"} iconName="House" />
-          <ItemSidebar itemText={"Véhicules"} iconName="Home" />
-          <ItemSidebar itemText={"Accessoires"} iconName="Apartment" />
-          <ItemSidebar itemText={"Objectifs"} iconName="Apartment" />
+          <ItemSidebar itemText={"Bornes"} iconName="Bolt" />
+          <ItemSidebar itemText={"Véhicules"} iconName="DirectionsCar" />
+          <ItemSidebar itemText={"Accessoires"} iconName="Handyman" />
+          <ItemSidebar itemText={"Objectifs"} iconName="PieChart" />
         </List>
       </div>
     </>

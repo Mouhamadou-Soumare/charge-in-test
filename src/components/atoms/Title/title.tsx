@@ -8,7 +8,7 @@ interface AtomTitleProps {
   subtitle?: string;
   iconName?: keyof typeof MUIcon;
   position?: "left" | "right";
-  type?: "heading-title" | "h1" | "h2" | "h3";
+  type?:"h1" | "h2" | "h3" | "h4" |"h5" | "h6";
 }
 
 const TitleAtom: React.FC<AtomTitleProps> = ({
@@ -16,55 +16,37 @@ const TitleAtom: React.FC<AtomTitleProps> = ({
   subtitle,
   iconName,
   position = "left",
-  type = "heading-title",
+  type = "h1",
 }) => {
   const theme = useTheme();
 
   const getHeaderVariant = () => {
     switch (type) {
-      case "heading-title":
       case "h1":
         return "h1";
       case "h2":
         return "h2";
       case "h3":
         return "h3";
+      case "h4":
+        return "h4";
+      case "h5":
+        return "h5";  
+      case "h6":
+          return "h6";  
       default:
-        return "h1";
+        return "h5";
     }
   };
 
   const getHeaderStyle = () => {
-    switch (type) {
-      case "heading-title":
-        return {
-          fontSize: `40px`,
-          fontWeight: "bold",
-        };
-      case "h1":
-        return {
-          fontSize: `20px`,
-          fontWeight: "bold",
-        };
-      case "h2":
-        return {
-          fontSize: `16px`,
-          fontWeight: "bold",
-        };
-      case "h3":
-        return {
-          fontSize: `14px`,
-          fontWeight: "bold",
-        };
-      default:
-        return {};
-    }
+    return theme.typography[type];
   };
 
   const Icon = iconName ? MUIcon[iconName] : null;
 
   return (
-    <div className="heading-container">
+    <div className="heading-container flex-column">
       <div className="title">
         {iconName && position === "left" && Icon && (
           <Icon style={{ color: theme.palette.primary.main }} />

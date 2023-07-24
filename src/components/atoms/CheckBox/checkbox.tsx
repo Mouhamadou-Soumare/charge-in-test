@@ -19,7 +19,7 @@ const CheckboxAtom: React.FC<CheckboxAtomProps> = ({
  
 
   return (
-    <FormControlLabel control={<CheckBox checked />} label={label} />
+    <FormControlLabel control={<CheckBox  />} label={label} />
 
   );
 };

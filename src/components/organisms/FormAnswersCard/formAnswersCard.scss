@@ -1,5 +1,11 @@
 .form-answers-card{
-    width: 589px;
+    width: 53%;
     border-radius: 16px !important;
-    padding: 40px;
+}
+
+
+@media (max-width: 900px) { 
+    .form-answers-card{
+        width: auto;
+    }    
 }

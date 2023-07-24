@@ -128,7 +128,7 @@ const TableDash: React.FC = () => {
                       {row.name}
                     </TableCell>
                     <TableCell align="left" padding="none">
-                      Borne Modèlle {row.station}
+                      Borne Modèle {row.station}
                     </TableCell>
                     <TableCell align="left" padding="none">
                       {row.estimate}
@@ -141,7 +141,8 @@ const TableDash: React.FC = () => {
                       onEditClick={() => handleEditClick(row)}
                       onDeleteClick={() => handleDeleteClick(row)}
                       onViewMoreClick={() => handleViewMoreClick(row)}
-            />                    </TableCell>
+            />        
+            </TableCell>
                   </TableRow>
                 );
               })}

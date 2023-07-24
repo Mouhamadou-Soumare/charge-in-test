@@ -1,0 +1,106 @@
+@import "App";
+
+body {
+  margin: 0;
+  font-family: "Chivo", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-background !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-test {
+  margin: 20rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main-content {
+  padding: 40px;
+}
+
+.first-title-dashboard {
+  margin-bottom: 40px;
+}
+
+.section-dashboard {
+  margin-top: 36px;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+@mixin typography($color, $font-size, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+.header-title {
+  @include typography($color-black, 40px, 700);
+}
+
+h1 {
+  &.regular {
+    @include typography($color-black, 20px, 400);
+  }
+  &.semiBold {
+    @include typography($color-black, 20px, 600);
+  }
+  &.bold {
+    @include typography($color-black, 20px, 700);
+  }
+}
+
+h2 {
+  &.regular {
+    @include typography($color-black, 16px, 400);
+  }
+  &.semiBold {
+    @include typography($color-black, 16px, 600);
+  }
+  &.bold {
+    @include typography($color-black, 16px, 700);
+  }
+}
+
+h3 {
+  &.regular {
+    @include typography($color-black, 14px, 400);
+  }
+  &.semiBold {
+    @include typography($color-black, 14px, 600);
+  }
+  &.bold {
+    @include typography($color-black, 14px, 700);
+  }
+}
+
+.menu-item {
+  @include typography($color-black, 14px, 400);
+}
+
+p {
+  &.regular {
+    @include typography($color-black, 12px, 400);
+  }
+}
+
+.card-template {
+  padding: 40px;
+  border-radius: 16px !important;
+}

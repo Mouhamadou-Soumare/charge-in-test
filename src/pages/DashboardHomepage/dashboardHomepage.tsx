@@ -23,7 +23,7 @@ const DashboardHomepage : React.FC = () => {
             </div>
             <div className='section-dashboard'>
                 <div className='title-section-dashoard'>
-                <SubtitleDashboard title='Statistiques de' titleWithColor='Charge-in' />
+                    <SubtitleDashboard title='Statistiques de' titleWithColor='Charge-in' />
                 </div>
                 <div className='elements-dashboard card-container'>
                     {cardData.map((data: CardData, index: number) => (

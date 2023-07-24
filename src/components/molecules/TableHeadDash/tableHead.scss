@@ -1,18 +1,19 @@
-.table-head{
-    .title{
-        color:#8FA2A2;
-        text-align: left;
-        padding: 16px 0;
-
-        span{
-            svg{
-                display: none;
-            }
+.table-head {
+    .title {
+      color: #8fa2a2;
+      text-align: left;
+      padding: 16px 0;
+  
+      span {
+        svg {
+          display: none;
         }
+      }
     }
-
-    .row{
-        height: 60px;
-        border-top: 1px solid rgba(224, 224, 224, 1);
+  
+    .row {
+      height: 60px;
+      border-top: 1px solid rgba(224, 224, 224, 1);
     }
-}
+  }
+  

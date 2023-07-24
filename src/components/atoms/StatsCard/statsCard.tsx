@@ -25,7 +25,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
     (typeof b2bStat === 'string' && b2bStat.includes('€'));
 
   return (
-    <Box className="stats-container">
+    <Box className="stats-container flex-column">
       {otherStat && (
         <div className='flex-column stats-margin'>
           <div className='other-stat-name'>{otherStat}</div>
@@ -36,7 +36,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
       <div className='flex-row stats-margin'>
         <div className='key-stat'>
           {isEuroStat ? (
-            <span className='stat-with-ht'>
+            <span className='stat-with-ht flex-row'>
               {keyStat} <span className='HT-stat'>HT</span>
             </span>
           ) : (
@@ -51,12 +51,12 @@ const StatsCard: React.FC<StatsCardProps> = ({
       {b2bStat && (
         <div className='stats-margin'>
           {isEuroStat ? (
-            <div className='business-stat-container-with-ht'>
+            <div className='business-stat-container-with-ht flex-column'>
               <div> <div className='b2-title'>B2C</div> <span className='stat-with-ht'> {b2cStat} <span className='HT-stat'>HT</span> </span></div>
               <div> <div className='b2-title'>B2B</div> <div > {b2bStat} <span className='HT-stat'>HT</span></div></div>
             </div>
           ) : (
-            <div className='business-stat-empty'>
+            <div className='business-stat-empty flex-row'>
               <div>B2C: {b2cStat || '##'}</div>
               <div> B2B: {b2bStat || '##'}</div> 
             </div>

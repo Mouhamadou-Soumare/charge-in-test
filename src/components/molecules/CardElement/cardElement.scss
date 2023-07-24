@@ -1,0 +1,35 @@
+.container-element-selected {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #dce6e5;
+    background:  #fff;
+    gap: 64px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+
+    .img-element {
+      max-width: 150px;
+    }
+
+    .value-element {
+      font-size: 48px;
+      color: #304399;
+      font-weight: 600;
+    }
+
+  }
+
+  @media (min-width: 900px) { 
+      .container-element-selected {
+        .border-right {
+          padding-right: 40px;
+          border-right: 1px #dce6e5 solid;
+          height: max-content;
+        }
+      }
+   }

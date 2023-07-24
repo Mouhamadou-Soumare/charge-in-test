@@ -7,12 +7,18 @@ interface Comment {
   user: string;
 }
 
+const initialComment: Comment = {
+  id: 1,
+  content: "",
+  user: "initialUser",
+};
+
 interface CommentCardState {
   comments: Comment[];
 }
 
 const initialState: CommentCardState = {
-  comments: [],
+  comments: [initialComment], 
 };
 
 const commentCardSlice = createSlice({

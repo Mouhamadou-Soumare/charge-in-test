@@ -1,11 +1,10 @@
-.flex-row{
-    display: flex;
-    flex-direction: row;
+.flex-row {
     justify-content: space-between;
-    align-items: center;
-
-    .button-head-b2c-list{
-        display: flex;
-        gap: 24px;
+    align-items: center;;
+  
+    .button-head-b2c-list {
+      display: flex;
+      gap: 24px;
     }
-}
+  }
+  

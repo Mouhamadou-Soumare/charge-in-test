@@ -23,7 +23,8 @@ const InputAtom: React.FC<InputAtomProps> = ({
     return (
       <TextField
         hiddenLabel
-        id="filled-hidden-label-small"
+        id="filled-hidden-label-small input-form"
+        name="input-form"
         placeholder={placeholder}
         variant="standard"
         size="small"
@@ -38,7 +39,8 @@ const InputAtom: React.FC<InputAtomProps> = ({
         hiddenLabel
         id="filled-hidden-label-small"
         placeholder={placeholder}
-        variant="outlined" 
+        variant="outlined"
+        name="input-back-office"
         size="small"
         className="input-back-office"
         value={inputValue}
