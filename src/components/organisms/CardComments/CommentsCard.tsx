@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { addComment, selectComments } from '../../../features/CommentsCardSlice';
+import { addComment, selectComments } from '../../../features/commentsCardSlice';
 import { RootState } from '../../../app/store';
 import TitleCard from '../../atoms/TitleCard/titleCard';
 import Card from '@mui/material/Card';

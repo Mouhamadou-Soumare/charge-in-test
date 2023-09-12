@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AccommodationType } from "../components/atoms/formAnswerCard/formAnswerCard";
 
-interface FormAnswersData {
+export interface FormAnswersData {
   accomodation: AccommodationType;
   parking: string;
   owner: string;

@@ -1,18 +1,17 @@
-import { FormAnswersData } from "../components/molecules/FormAnswersCard/FormAnswersCard";
+import { FormAnswersData } from "./formAnswerSlice";
 
 export const formAnswerSampleData: FormAnswersData = {
-  title: "Form Answers",
   accomodation: "Maison",
   parking: "Garage",
-  owner: true,
+  owner: "oui",
   coproperty: "No",
   purchase: "Mortgage",
-  model: 2,
+  model: "2",
   usage: "Residential",
   batteryCapacity: 5000,
   installationTime: "3 weeks",
-  alreadyContactFitter: true,
-  price: 15000,
+  alreadyContactFitter: "oui",
+  price: "15 000",
   fitterName: "John Doe",
   modelPresent: "Yes",
   brand: "Brand X",

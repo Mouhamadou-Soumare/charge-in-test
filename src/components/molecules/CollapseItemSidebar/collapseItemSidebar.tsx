@@ -18,7 +18,7 @@ const CollapseItemSidebar: React.FC<CollapseItemSidebarProps> = ({
   iconName,
 }) => {
   const Icon = iconName ? MUIcon[iconName] : null;
-
+  const open: boolean = true;
   return (
     <Collapse in={open} timeout="auto" unmountOnExit>
       <List component="div" disablePadding>
