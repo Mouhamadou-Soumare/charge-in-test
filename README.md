@@ -6,8 +6,11 @@
 </ul><ul>
 <li>Les pages présentes sont :
 Login: /
+</br>
 Accueil: Accueil
+</br>
 Maisons: /accueil/maisons
+</br>
 Profil: /accueil/profil 
 </li>
 </ul><ul>
