@@ -10,7 +10,7 @@ import TableBody from "@mui/material/TableBody";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TablePagination from "@mui/material/TablePagination";
-import { HeadCellData, TableData } from "../../../features/table/types";
+import {  TableData } from "../../../features/table/types";
 import {
   stableSort,
   getComparator,
