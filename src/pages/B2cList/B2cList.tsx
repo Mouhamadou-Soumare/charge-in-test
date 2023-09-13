@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import TitleAtom from '../../components/atoms/Title/title';
-import TableDashboard from '../../components/organisms/TableDashboard/TableDashboard';
+import TableDashboard from '../../components/organisms/TableDashboard/TableDashboard'
 import ButtonAtom from '../../components/atoms/Button/button';
 import "./b2clist.scss";
 
