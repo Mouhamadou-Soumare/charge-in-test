@@ -34,5 +34,5 @@ const commentCardSlice = createSlice({
 export const { addComment } = commentCardSlice.actions;
 
 
-export const selectComments = (state: RootState) => state.commentsCard.comments;
+export const selectComments = (state: RootState) => state.commentCard.comments;
 export default commentCardSlice.reducer;
