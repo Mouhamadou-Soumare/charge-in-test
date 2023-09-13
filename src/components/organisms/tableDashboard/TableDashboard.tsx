@@ -29,7 +29,7 @@ import { headCells } from "../../../features/table/tableData";
 import StepTableRow from "../../atoms/StepTableRow/stepTableRow";
 import ActionTableRow from "../../atoms/ActionTableRow/actionTableRow";
 
-const TableDash: React.FC = () => {
+const TableDashboard: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const { order, orderBy, page, rowsPerPage, rows } =
@@ -177,4 +177,4 @@ const TableDash: React.FC = () => {
   );
 };
 
-export default TableDash;
+export default TableDashboard;
