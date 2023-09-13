@@ -6,7 +6,7 @@ import authSlice from "../features/authSlice";
 import personalInfoCardSlice from "../features/personalInfoCardSlice";
 import formAnswerSlice from "../features/formAnswerSlice";
 import cardStationSlice from "../features/cardStationSlice";
-import commentsCardSlice from "../features/commentsCardSlice";
+import commentCardSlice from "../features/commentsCardSlice";
 import cardInstallerSlice from "../features/cardInstallerSlice";
 
 export const store = configureStore({
@@ -17,7 +17,7 @@ export const store = configureStore({
     auth: authSlice,
     personalInfoCard: personalInfoCardSlice,
     formAnswerCard: formAnswerSlice,
-    commentsCard: commentsCardSlice,
+    commentsCard: commentCardSlice,
     cardStation: cardStationSlice,
     cardInstaller: cardInstallerSlice
   },
