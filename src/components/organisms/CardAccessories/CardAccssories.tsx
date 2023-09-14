@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from '@mui/material';
 import TitleCard from '../../atoms/TitleCard/titleCard';
 import ButtonAtom from '../../atoms/Button/button';
-import "./CardAccessories.scss";
+import "./cardAccessories.scss";
 
 const CardAccessories: React.FC = () => {
 
