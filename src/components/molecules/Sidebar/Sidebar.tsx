@@ -25,7 +25,7 @@ const Sidebar: React.FC = () => {
       <div className="group-item-sidebar">
         <List>
           <ItemSidebar
-            itemText={"Acceuil"}
+            itemText={"Accueil"}
             iconName="ViewModule"
             link="/accueil"
             isActive={activeLink === "/accueil"}
